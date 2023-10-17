@@ -1,0 +1,5 @@
+# sh
+export ARM_CLIENT_ID="a7a761ea-ffef-435d-9dcb-1a2b191399e3"
+export ARM_CLIENT_SECRET="fKC8Q~J8ftrjmUWBJnP-O2D6GdAVJ-hip6-qjcPC"
+export ARM_TENANT_ID="1d1cc793-c571-4261-8dac-be2c560e9cad"
+export ARM_SUBSCRIPTION_ID="b3461637-deb8-4a28-a50a-fb9029c2da4c"
