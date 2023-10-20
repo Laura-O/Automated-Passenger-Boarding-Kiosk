@@ -11,3 +11,11 @@
 # Directories
 .terraform/
 .vagrant/
+
+
+# VS Code
+.vscode/*
+
+# env
+.env
+

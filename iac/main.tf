@@ -16,6 +16,16 @@ resource "azurerm_storage_account" "sa" {
   account_tier             = "Standard"
   account_replication_type = "GRS"
 
+  blob_properties {
+    cors_rule {
+      allowed_headers    = ["*"]
+      allowed_methods    = ["DELETE", "GET", "HEAD", "MERGE", "POST", "OPTIONS", "PUT", "PATCH"]
+      allowed_origins    = ["https://fott-2-1.azurewebsites.net/"]
+      exposed_headers    = ["*"]
+      max_age_in_seconds = 0
+    }
+  }
+
   tags = {
   }
 }
