@@ -41,3 +41,44 @@ resource "azurerm_cognitive_account" "fr" {
   tags = {
   }
 }
+
+resource "azurerm_cognitive_account" "face" {
+  name                = "${var.name}face"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  kind                = "Face"
+
+  sku_name = "F0"
+
+  tags = {
+  }
+}
+
+resource "azurerm_media_services_account" "mediaservices" {
+  name                = "udacityproject1medias"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+
+  storage_account {
+    id         = azurerm_storage_account.sa.id
+    is_primary = true
+  }
+}
+
+resource "azurerm_cognitive_account" "cvtraining" {
+  name                = "${var.name}cvtraining"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  kind                = "CustomVision.Training"
+
+  sku_name = "S0"
+}
+
+resource "azurerm_cognitive_account" "cvtesting" {
+  name                = "${var.name}cvtesting"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  kind                = "CustomVision.Prediction"
+
+  sku_name = "S0"
+}
