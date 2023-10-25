@@ -1,0 +1,27 @@
+# Final Reflection
+
+Overall, I think the project was a nice idea and I learned how to use the individual services. However, some
+aspects made this project really hard for me and made me spend a lot of time on minor issues instead of
+focussing on learning about the actual tools.
+
+## Azure Availabilty
+
+I started the project on my private Azure account. At some point I realized that using the Face API is forbidden
+for private accounts and there is also no option to request it for the course. Therefore, I switched to the
+Udacity lab that only gave me 7 hours of time for each iteration. This is certainly not enough to finish this project
+in one run.
+
+As a consequence, I had to setup resources several times which took a lot of time. I created some Terraform code to
+make this preparation step a bit quicker but this automation was only possible for a part of the project. This was
+quite unfortunate as this was a task requiring great dilligence and I would have liked to spend that time on making
+the project better.
+
+## Documentation
+
+It's not surprising that the Azure AI Services are updated very frequently. Unfortunately, this created some issues
+when documentation was not updated, information was missing or links in the documentation were not working. Overall,
+figuring out small details also took me some time I would have liked to spend on making this project stand out.
+
+For example, I missed setting CORS in the Azure Storage before connecting it to the Custom Vidion UI. The error message
+was vague, so I tried several approaches (adding specific roles) until I figured out what was missing. Even then, the UI
+was not working until I realized I had to go back to the project setup, select the Blob storage again and save it.
